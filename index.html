@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Главное меню</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Привет, <span id="user-name"></span></h2>
+    <h3>Чат</h3>
+    <ul id="chat-list"></ul>
+    <input id="msg-input" placeholder="Напишите сообщение">
+    <button onclick="sendMessage()">Отправить</button>
+    <hr>
+    <button onclick="window.location.href='profile.html'">Профиль</button>
+    <button onclick="window.location.href='settings.html'">Настройки</button>
+  </div>
+  <script src="main.js"></script>
+  <script>
+    if(currentUser) document.getElementById("user-name").innerText = currentUser.username;
+    renderMessages();
+  </script>
+</body>
+</html>
